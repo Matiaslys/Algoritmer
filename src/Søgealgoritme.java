@@ -41,19 +41,26 @@ public class Søgealgoritme {
     }
 
     public static String findMax() {
+        // Metode jeg brugte først.
+//        int f;
+//        for (int i = 0; i < data3.length; i++) {
+//            for ( f = 0; f < data3.length; f++) {
+//                if (data3[i] < data3[f] || f == data3.length - 1) {
+//                    if (f == data3.length -1){
+//                        max = data3[i];
+//                    }
+//                    break;
+//                }
+//            }
+//            if (f == data3.length - 1) {
+//                break;
+//            }
+//        }
+        //en bedre metode jeg fandt.
         int max = 0;
-        int f;
         for (int i = 0; i < data3.length; i++) {
-            for ( f = 0; f < data3.length; f++) {
-                if (data3[i] < data3[f] || f == data3.length - 1) {
-                    if (f == data3.length -1){
-                        max = data3[i];
-                    }
-                    break;
-                }
-            }
-            if (f == data3.length - 1) {
-                break;
+            if (data3[i] > max){
+                max = data3[i];
             }
         }
         return "Største tal i arrayet er " + max;
